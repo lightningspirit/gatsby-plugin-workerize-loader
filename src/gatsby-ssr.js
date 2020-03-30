@@ -5,7 +5,7 @@ const { prefix } = require('./constants')
 
 const publicFolder = './public'
 
-const isWorker = file => file.includes(prefix) && file.endsWith('.worker.js')
+const isWorker = file => file.includes(prefix) && file.endsWith('.worker.ts')
 const shouldPreload = (file, preloads) =>
   file.startsWith(prefix) && preloads.some(preload => file.includes(preload))
 
